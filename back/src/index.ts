@@ -1,4 +1,6 @@
-import express from 'express';
+import server from './server';
+import { PORT } from './config/envs';
 
-const string = 'Hello, World!';
-const string2 = 'Hello, World!';
+server.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
+});
